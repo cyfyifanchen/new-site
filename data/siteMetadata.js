@@ -3,7 +3,7 @@ const siteMetadata = {
   title: 'Yifan Chen Blog',
   author: 'Yifan Chen',
   headerTitle: 'YIFAN CHEN',
-  description: 'A blog created with Next.js and Tailwind.css',
+  description: 'Nothing for now this guy is lazy.',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',

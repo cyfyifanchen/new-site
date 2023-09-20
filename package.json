@@ -1,7 +1,7 @@
 {
-  "name": "tailwind-nextjs-starter-blog",
-  "version": "2.0.1",
-  "private": true,
+  "name": "Yifan Chen",
+  "version": "1.0.0",
+  "private": false,
   "scripts": {
     "start": "next dev",
     "dev": "cross-env INIT_CWD=$PWD next dev",
