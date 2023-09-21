@@ -1,0 +1,121 @@
+---
+title: 'About Bun 1.0 Late But Full The One And One That You Should Read'
+date: '2023-09-20'
+lastmod: '2023-09-20'
+tags: ['system design', 'javascript']
+draft: false
+summary: 'This is the one and only Chromieum mechism article you need to bookmark. It explains how the heck Chromieum works step by step.'
+images: ['']
+---
+
+<p
+  class="first-line:uppercase first-line:tracking-widest
+  first-letter:text-7xl first-letter:font-bold first-letter:text-slate-900
+  first-letter:mr-3 first-letter:float-left
+"
+>
+  Well, let me tell you something, funny boy. Y'know that little stamp, the one that says "New York
+  Public Library"? Well that may not mean anything to you, but that means a lot to me. One whole
+  hell of a lot.
+</p>
+
+I am not gonna write my thoughts of Bun in this blog post, instead I wanna quote from their official doc and give my response to that, these gonna be my future takeaway, they might be yours as well:
+
+### All-in-one toolkit
+
+> However, since Node.js debuted 14 years ago, layers and layers of tooling have accumulated on top of each other. And like any system that grows and evolves without centralized planning, JavaScript tooling has become slow and complex.
+
+This statement is so true, and so FKing on the point. Javascript is great, and its community is just beyond what I can describe, but its ecosystem is a mess. Imagine how would you explain all the tooling, packages, versions to a rookie on his day one?
+
+> You will however need to unlearn the many tools that Bun makes unnecessary:
+
+You gotta love this, and I agreed.
+
+> While these tools are each good in their own right (mostly), using them all together inevitably creates fragility and a slow developer experience. They perform a lot of redundant work; when you run jest, your code will be parsed 3+ times by various tools! And the duct tape, plugins, and adapters required to stitch everything together always frays eventually.
+
+Ha, right on the spot, well done.
+
+### TypeScript and JSX support
+
+> Bun supports both module systems, all the time. No need to worry about file extensions, .js vs .cjs vs .mjs, or including "type": "module" in your package.json.
+
+> You can even use import and require(), in the same file. It just works.
+
+```
+import lodash from "lodash";
+const _ = require("underscore");
+```
+
+Just by having `import` and `require` work together in the same file, man that's amazing.
+
+### Package manager
+
+> Even if you don't use Bun as a runtime, Bun's built-in package manager can speed up your development workflow. Gone are the days of staring at that npm spinner as your dependencies install.
+
+> Bun may look like the package managers you're used to —
+
+```
+bun install
+bun add <package> [--dev|--production|--peer]
+bun remove <package>
+bun update <package>
+```
+
+Ha, is the `npm`, `yarn`, `pnpm` shit finally over? I'd love that.
+
+### Speed
+
+> Bun is fast, starting up to 4x faster than Node.js. This difference is only magnified when running a TypeScript file, which requires transpilation before it can be run by Node.js.
+
+> Unlike Node.js and other runtimes that are built using Google's V8 engine, Bun is built using Apple's WebKit engine. WebKit is the engine that powers Safari and is used by billions of devices every day. It's fast, efficient, and has been battle-tested for decades.
+
+Honestly, at this point of my life, faster speed might be the last thing I care about as long as the speed is in an acceptable range. However, if faster speed comes with good developer experience, I think I am gonna by happy with that. So the takeaway is faster speed can't be the selling point by itself.
+
+Does Safari really have billions of devices every day in usage? I doubt it.
+
+### Test runner
+
+I am not a fan of writing unit tests probably because I think it is useless, and has nothing rewarding as good as building a good product. Let's say I'd rather spend time on tweaking my UI better for the end-users, the result is that they are happy. But writing unit tests doesn't make me happy, doesn't make end-uers happy, doesn't make my team happy, I don't even know writing unit test makes WHO happy.
+
+At least within Bun's test runner, it is built-in, it might change my mind, we will see.
+
+### Bundler
+
+> Bun is a JavaScript and TypeScript bundler and minifier that can be used to bundle code for the browser, Node.js, and other platforms.
+
+> Bun introduces JavaScript macros, a mechanism for running JavaScript functions at bundle-time. The value returned from these functions are directly inlined into your bundle.
+
+I am excited to see what this can do as well.
+
+### Biggest takeaway
+
+> Bun is more than a runtime. The long-term goal is to be a cohesive, infrastructural toolkit for building apps with JavaScript/TypeScript, including a package manager, transpiler, bundler, script runner, test runner, and more.
+
+It feels like what the Bun is doing is creating an all-in-one solution. Technically speaking, an all-in-one solution doesn't exist. If you want to make it happen, you've got to spend an enormous amount of effort and endless time on maintenance.
+
+### On the second thought
+
+After reading more on the doc, I found this:
+
+> At its core is the Bun runtime, a fast JavaScript runtime designed as a drop-in replacement for Node.js. It's written in Zig and powered by JavaScriptCore under the hood, dramatically reducing startup times and memory usage.
+
+> Similarly, Node.js is a JavaScript runtime that can be used in non-browser environments, like servers. JavaScript programs executed by Node.js have access to a set of Node.js-specific globals like Buffer, process, and \_\_dirname in addition to built-in modules for performing OS-level tasks like reading/writing files (node:fs) and networking (node:net, node:http). Node.js also implements a CommonJS-based module system and resolution algorithm that pre-dates JavaScript's native module system.
+
+These two paragraphs shed light on the contrasting approaches taken by Bun and Node.js. While Node.js and its sibling Deno rely on the V8 JavaScript engine developed by Google, Bun opts for JavaScriptCore, which is an engine developeaind by Apple. Notably, Bun is written in Zig, a programming language renowned for its impressive speed. It's worth noting that in the realm of building development tools, Rust and Zig are often considered the top contenders. However, Rust stands out for its stability and thriving community, while Zig remains somewhat less recognized. This unique choice of Zig as the language for Bun could be seen as a double-edged sword, offering exceptional speed but potentially facing a challenge in terms of broader adoption within the development community.
+
+We shall see what happens next, for the meantime, I am gonna have a good time to feel the fastness of Bun.
+
+## Update
+
+So, I've been reading and hearing quite a bit on Bun 1.0, now I think I know a little bit more on Bun, I am gonna write the updates here.
+
+Here are some of the major reasons why Bun is fast:
+
+- The task queue:
+
+- Written in Zig
+
+- Written in JavScriptCore
+-
+- Pointer to go though
+- Bun is VC funded.

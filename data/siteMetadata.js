@@ -1,6 +1,6 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Yifan Chen Blog',
+  title: 'Yifan Chen',
   author: 'Yifan Chen',
   headerTitle: 'YIFAN CHEN',
   description: '',
@@ -9,7 +9,7 @@ const siteMetadata = {
   siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
   siteRepo: 'https://github.com/timlrx/tailwind-nextjs-starter-blog',
   siteLogo: '/static/images/logo.png',
-  socialBanner: '/static/images/twitter-card.png',
+  // socialBanner: '/static/images/twitter-card.png',
   mastodon: 'https://mastodon.social/@mastodonuser',
   email: 'address@yoursite.com',
   github: 'https://github.com',
