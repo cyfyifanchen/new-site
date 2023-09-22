@@ -21,7 +21,7 @@ const Header = () => {
               siteMetadata.headerTitle
             )}
           </div>
-          <p className="text-sm text-center text-gray-400">fav language css ¯\_(ツ)_/¯</p>
+          <p className="text-sm ml-2 text-center text-gray-400">fav language css¯\_(ツ)_/¯</p>
         </Link>
       </div>
       <div className="flex items-center leading-5 space-x-4 sm:space-x-6">
