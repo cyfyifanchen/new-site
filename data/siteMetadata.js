@@ -1,8 +1,8 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Yifan Chen',
-  author: 'Yifan Chen',
-  headerTitle: 'YIFAN CHEN',
+  title: 'Don Joe',
+  author: 'Don Joe',
+  headerTitle: 'Don Joe',
   description: '',
   language: 'en-us',
   theme: 'system', // system, dark or light

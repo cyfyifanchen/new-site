@@ -12,7 +12,6 @@ const Header = () => {
       <div>
         <Link href="/" aria-label={siteMetadata.headerTitle}>
           <div className="flex items-center justify-between">
-            <Logo className="mr-1 pt-1" width={35} height={35} />
             {typeof siteMetadata.headerTitle === 'string' ? (
               <div className="mb-1 h-6 text-2xl font-semibold text-gray-700 dark:text-gray-300">
                 {siteMetadata.headerTitle}
@@ -21,7 +20,7 @@ const Header = () => {
               siteMetadata.headerTitle
             )}
           </div>
-          <p className="text-sm ml-2 text-center text-gray-400">fav language css¯\_(ツ)_/¯</p>
+          <p className="text-sm ml-2 text-center text-gray-400"></p>
         </Link>
       </div>
       <div className="flex items-center leading-5 space-x-4 sm:space-x-6">
